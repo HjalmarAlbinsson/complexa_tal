@@ -1,1 +1,15 @@
+import math 
 
+re = int(input("Ange re(z) -> "))
+im = int(input("Ange im(z) -> "))
+
+absolutbelopp1 = re**2 + im**2
+absolutbelopp2 = math.sqrt(absolutbelopp1)
+arg = math.atan(im/re) 
+while arg < 0:
+    arg = arg + math.pi
+
+while arg >= (2*math.pi):
+    arg = arg - math.pi 
+
+print(f"z i polär form: {round(absolutbelopp2,3)}*(cos({round(arg,3)})+ i*sin({round(arg,3)}))")
